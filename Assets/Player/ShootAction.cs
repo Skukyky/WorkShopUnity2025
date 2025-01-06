@@ -73,10 +73,10 @@ public class ShootAction : MonoBehaviour
                     hit.rigidbody.AddForce(-hit.normal * hitForce);
  
                     //S'assure que la cible touchée a un composant ReceiveAction
-                    if (hit.collider.gameObject.GetComponent<ReceiveAction>() != null)
+                    if (hit.collider.gameObject.GetComponent<ReceiveDamage>() != null)
                     {
                         //Envoie les dommages à la cible
-                        hit.collider.gameObject.GetComponent<ReceiveAction>().GetDamage(gunDamage);
+                        hit.collider.gameObject.GetComponent<ReceiveDamage>().GetDamage(gunDamage);
                     }
                 }
             }
