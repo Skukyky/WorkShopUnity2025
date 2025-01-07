@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: fe7432386655adf47834e36608a99506
+guid: d70a494214b77434fb6c03df79a72ad7
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -49,7 +49,7 @@ ModelImporter:
     generateSecondaryUV: 0
     useFileUnits: 1
     keepQuads: 0
-    weldVertices: 0
+    weldVertices: 1
     bakeAxisConversion: 0
     preserveHierarchy: 0
     skinWeightsMode: 0
@@ -88,7 +88,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.39999998
+    globalScale: 40
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
