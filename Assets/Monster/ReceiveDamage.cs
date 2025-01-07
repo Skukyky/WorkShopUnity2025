@@ -62,18 +62,9 @@ public class ReceiveDamage : MonoBehaviour
         hitPoint -= damage;
  
 //S'il reste des points de vie
-        if (hitPoint > 0)
+        if (hitPoint <= 0)
         {
-//SendMessage appellera toutes les méthodes "TakeDamage" de ce GameObject
-//Exemple : "TakeDamage" est dans MonsterController
-            gameObject.SendMessage("TakeDamage", SendMessageOptions.DontRequireReceiver);
-        }
-//Sinon
-        else
-        {
-//SendMessage appellera toutes les méthodes "Defeated" de ce GameObject
-//Exemple : "Defeated" est dans MonsterController
-            gameObject.SendMessage("Defeated", SendMessageOptions.DontRequireReceiver);
+            Destroy(gameObject);
         }
     }
 }
