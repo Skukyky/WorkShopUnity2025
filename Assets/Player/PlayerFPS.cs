@@ -18,7 +18,7 @@ public class PlayerFPS : MonoBehaviour
     public float jumpSpeed = 8f;
  
     //Gravité
-    float gravity = 20f;
+     public float gravity = 20f;
  
     //Déplacement
     Vector3 moveDirection;
