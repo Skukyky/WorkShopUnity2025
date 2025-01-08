@@ -83,25 +83,7 @@ public class MonsterController : MonoBehaviour
         }
     }
 
-    private void Attacking()
-    {
-        if (animator.GetCurrentAnimatorStateInfo(0).IsName(ATTACK_STATE))
-        {
-            float normalizedTime = animator.GetCurrentAnimatorStateInfo(0).normalizedTime;
-            if (normalizedTime > 0.95f)
-            {
-                meleeWeapon.StopAttack();
-                Walk(); // Reviens à la marche après l'attaque
-                return;
-            }
-
-            meleeWeapon.StartAttack();
-        }
-        else
-        {
-            Attack(); // Redémarre l'animation d'attaque si ce n'est pas ATTACK_STATE
-        }
-    }
+    
 
     private bool MovingToTarget()
     {

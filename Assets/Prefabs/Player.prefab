@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: 201601459439346064}
   - component: {fileID: 4500456298335996303}
   - component: {fileID: 5658800172481161510}
-  m_Layer: 0
+  - component: {fileID: 8772380836610559748}
+  m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52,7 +53,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5639269873695987511}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -149,6 +150,22 @@ MonoBehaviour:
   _data:
     _json: '{"declarations":{"Kind":"Object","collection":{"$content":[],"$version":"A"},"$version":"A"}}'
     _objectReferences: []
+--- !u!114 &8772380836610559748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5639269873695987511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 975fa0b95b7b5b147af0cd0d49ecfef7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHitPoint: 100
+  hitPoint: 0
+  isInvulnerable: 0
+  invulnerabiltyTime: 0.5
 --- !u!1 &5662240955619092580
 GameObject:
   m_ObjectHideFlags: 0
@@ -159,7 +176,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6940089530723150219}
   - component: {fileID: 5057265051624089428}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Camera Pivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -209,7 +226,7 @@ GameObject:
   - component: {fileID: 1914512276469937569}
   - component: {fileID: 1715296525997477787}
   - component: {fileID: 2538394468017301994}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -346,6 +363,14 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 9d5a33fce07758d4c8bdee73c591601a, type: 3}
       propertyPath: m_Name
       value: SM_Pistol
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 9d5a33fce07758d4c8bdee73c591601a, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 9d5a33fce07758d4c8bdee73c591601a, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9d5a33fce07758d4c8bdee73c591601a, type: 3}
       propertyPath: m_LocalPosition.x

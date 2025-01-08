@@ -21,12 +21,14 @@ public class ReceiveDamage : MonoBehaviour
  
 //Temps depuis le dernier dégât
     private float timeSinceLastHit = 0.0f;
+    
+    private MonsterController monsterController;
  
     private void Start()
     {
 //Au début : Points de vie actuels = Maximum de points de vie
         hitPoint = maxHitPoint;
- 
+        monsterController = GetComponent<MonsterController>();
         isInvulnerable = false;
     }
  
@@ -57,6 +59,7 @@ public class ReceiveDamage : MonoBehaviour
             return;
  
         isInvulnerable = true;
+        monsterController.TakeDamage();
  
 //Applique les dommages aux points de vies actuels
         hitPoint -= damage;
@@ -64,7 +67,7 @@ public class ReceiveDamage : MonoBehaviour
 //S'il reste des points de vie
         if (hitPoint <= 0)
         {
-            Destroy(gameObject);
+            monsterController.Defeated();
         }
     }
 }
