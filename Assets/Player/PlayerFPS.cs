@@ -7,6 +7,7 @@ public class PlayerFPS : MonoBehaviour
  
     //Composant qui permet de faire bouger le joueur
     CharacterController characterController;
+    private HeadBobSystem headBobSystem;
  
     //Vitesse de marche
     public float walkingSpeed = 7.5f;
@@ -38,7 +39,8 @@ public class PlayerFPS : MonoBehaviour
         //Cache le curseur de la souris
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
-        characterController = GetComponent<CharacterController>();  
+        characterController = GetComponent<CharacterController>();
+        headBobSystem = GetComponentInChildren<HeadBobSystem>();
     }
  
     // Update is called once per frame
@@ -67,11 +69,17 @@ public class PlayerFPS : MonoBehaviour
         {
             //En train de courir
             isRunning = true;
+            headBobSystem.amount = headBobSystem.amountRun;
+            headBobSystem.frequency = headBobSystem.frequencyRun;
+            headBobSystem.smooth = headBobSystem.smoothRun;
         }
         else
         {
             //En train de marcher
             isRunning = false;
+            headBobSystem.amount = headBobSystem.amountwalk;
+            headBobSystem.frequency = headBobSystem.frequencywalk;
+            headBobSystem.smooth = headBobSystem.smoothwalk;
         }
  
         // Est-ce que l'on court ?

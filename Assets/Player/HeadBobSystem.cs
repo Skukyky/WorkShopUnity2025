@@ -11,6 +11,24 @@ public class HeadBobSystem : MonoBehaviour
     
     [Range(10f, 100f)]
     public float smooth = 10f;
+    
+    [Range(0.001f, 0.01f)]
+    public float amountwalk = 0.0039f;
+    
+    [Range(1f, 30f)]
+    public float frequencywalk = 8.0f;
+    
+    [Range(10f, 100f)]
+    public float smoothwalk = 36.0f;
+    
+    [Range(0.001f, 0.01f)]
+    public float amountRun = 0.0059f;
+    
+    [Range(1f, 30f)]
+    public float frequencyRun = 12.0f;
+    
+    [Range(10f, 100f)]
+    public float smoothRun = 55.0f;
 
     private Vector3 _startPos;
     

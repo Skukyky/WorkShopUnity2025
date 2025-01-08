@@ -34,15 +34,17 @@ public class ShootAction : MonoBehaviour
     public float overHeatingRate;
     public float refreshrate;
     private bool _overHeat;
+    
+    Quaternion lookRifle;
  
  
     // Start is called before the first frame update
     void Start()
     {
- 
         //Référence de la caméra. GetComponentInParent<Camera> permet de chercher une Camera
         //dans ce GameObject et dans ses parents.
         _fpsCam = GetComponentInParent<Camera>();
+        lookRifle = transform.localRotation;
     }
  
     // Update is called once per frameS
@@ -57,13 +59,13 @@ public class ShootAction : MonoBehaviour
         {
             _overHeat = false;
         }
+
+        if (Time.time >= _nextFire) transform.localRotation = lookRifle;
             
         // Vérifie si le joueur a pressé le bouton pour faire feu (ex:bouton gauche souris)
         // Time.time > nextFire : vérifie si suffisament de temps s'est écoulé pour pouvoir tirer à nouveau
         if (Input.GetButtonDown("Fire1") && Time.time > _nextFire && overHeating < _overHeatingMax && !_overHeat)
         {
-            //Nouveau tir
- 
             //Met à jour le temps pour le prochain tir
             //Time.time = Temps écoulé depuis le lancement du jeu
             //temps du prochain tir = temps total écoulé + temps qu'il faut attendre
@@ -74,6 +76,7 @@ public class ShootAction : MonoBehaviour
                 overHeating = _overHeatingMax;
                 _overHeat = true;
             }
+            ShootAnimation();
             
  
             print(_nextFire);
@@ -108,5 +111,10 @@ public class ShootAction : MonoBehaviour
                 }
             }
         }
+    }
+
+    void ShootAnimation()
+    {
+        transform.localRotation = Quaternion.Euler(lookRifle.eulerAngles.x, lookRifle.eulerAngles.y, lookRifle.eulerAngles.z + 30f);
     }
 }

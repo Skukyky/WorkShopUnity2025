@@ -506,6 +506,14 @@ MonoBehaviour:
   player: {fileID: 0}
   meleeWeapon: {fileID: 0}
   currentAction: 
+  targetScanner:
+    detectionRadius: 20
+    detectionAngle: 270
+    obstacleLayerMask:
+      serializedVersion: 2
+      m_Bits: 0
+  currentTarget: {fileID: 0}
+  delayLostTarget: 10
 --- !u!136 &221432906
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2077,16 +2085,36 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4500456298335996303, guid: 24b5b7b62df86194cb9af88ef9df457a, type: 3}
+      propertyPath: runningSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4500456298335996303, guid: 24b5b7b62df86194cb9af88ef9df457a, type: 3}
+      propertyPath: walkingSpeed
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5057265051624089428, guid: 24b5b7b62df86194cb9af88ef9df457a, type: 3}
       propertyPath: amount
-      value: 0.01
+      value: 0.001
       objectReference: {fileID: 0}
     - target: {fileID: 5057265051624089428, guid: 24b5b7b62df86194cb9af88ef9df457a, type: 3}
       propertyPath: smooth
-      value: 100
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5057265051624089428, guid: 24b5b7b62df86194cb9af88ef9df457a, type: 3}
+      propertyPath: amountRun
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 5057265051624089428, guid: 24b5b7b62df86194cb9af88ef9df457a, type: 3}
       propertyPath: frequency
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5057265051624089428, guid: 24b5b7b62df86194cb9af88ef9df457a, type: 3}
+      propertyPath: smoothRun
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5057265051624089428, guid: 24b5b7b62df86194cb9af88ef9df457a, type: 3}
+      propertyPath: frequencyRun
       value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 5639269873695987511, guid: 24b5b7b62df86194cb9af88ef9df457a, type: 3}
