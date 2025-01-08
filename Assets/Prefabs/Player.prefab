@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4500456298335996303}
   - component: {fileID: 5658800172481161510}
   - component: {fileID: 8772380836610559748}
+  - component: {fileID: 4466287716985650802}
   m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
@@ -166,6 +167,22 @@ MonoBehaviour:
   hitPoint: 0
   isInvulnerable: 0
   invulnerabiltyTime: 0.5
+--- !u!114 &4466287716985650802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5639269873695987511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65cfd0af8479ee64f9444f1fc3962ba4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponRange: 200
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!1 &5662240955619092580
 GameObject:
   m_ObjectHideFlags: 0
@@ -214,6 +231,12 @@ MonoBehaviour:
   amount: 0.00795
   frequency: 20.5
   smooth: 28.7
+  amountwalk: 0.0039
+  frequencywalk: 8
+  smoothwalk: 36
+  amountRun: 0.0059
+  frequencyRun: 12
+  smoothRun: 55
 --- !u!1 &8029336967035757565
 GameObject:
   m_ObjectHideFlags: 0
