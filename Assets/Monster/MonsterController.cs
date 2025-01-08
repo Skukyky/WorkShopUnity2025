@@ -16,6 +16,17 @@ public class MonsterController : MonoBehaviour
     public const string ATTACK_STATE = "Stomp Attack";
 
     public string currentAction;
+    
+    //Scanner pour trouver des cibles
+    public TargetScanner targetScanner;
+ 
+    //Cible
+    public GameObject currentTarget;
+ 
+    //Temps avant de perdre la cible
+    public float delayLostTarget = 10f;
+ 
+    private float timeLostTarget = 0;
 
     private void Awake()
     {
@@ -47,6 +58,7 @@ public class MonsterController : MonoBehaviour
 
         if (currentAction == TAKE_DAMAGE_STATE)
         {
+            navMeshAgent.ResetPath();
             TakingDamage();
             return;
         }
@@ -61,7 +73,41 @@ public class MonsterController : MonoBehaviour
                 }
             }
         }
+        //Détection
+        FindingTarget();
+ 
+        //Si pas de cible, ne fait rien
+        if (currentTarget == null)
+        {
+            //Defaut
+            navMeshAgent.ResetPath();
+            animator.SetBool(WALK_STATE, false);
+            return;
+        }
+ 
+ 
+        //Est-ce que l'IA se déplace vers le joueur ?
+        if (MovingToTarget())
+        {
+            //En train de marcher
+            return;
+        }
+ 
+ 
+        //Attaque
+        if (currentAction != ATTACK_STATE && currentAction != TAKE_DAMAGE_STATE)
+        {
+            Attack();
+            return;
+        }
+
+        if (currentAction == ATTACK_STATE)
+        {
+            Attack();
+            return;
+        }
     }
+    
 
     public void TakeDamage()
     {
@@ -102,13 +148,45 @@ public class MonsterController : MonoBehaviour
         }
         else
         {
-            RotateToTarget(player.transform);
+            RotateToTarget(currentTarget.transform);
             return false;
         }
 
         return true;
     }
 
+    //Cherche une cible
+    private void FindingTarget()
+    {
+        //Si le joueur est détecté
+        if (targetScanner.Detect(transform, player))
+        {
+            currentTarget = player;
+            timeLostTarget = 0;
+            return;
+        }
+ 
+        //Si le joueur était détecté
+        //Calcule le temps avant d'abandonner
+        if (currentTarget != null)
+        {
+            timeLostTarget += Time.deltaTime;
+ 
+            if (timeLostTarget > delayLostTarget)
+            {
+                timeLostTarget = 0;
+                currentTarget = null;
+            }
+ 
+ 
+            return;
+        }
+ 
+ 
+        currentTarget = null;
+ 
+    }
+    
     private void Walk()
     {
         SetActionState(WALK_STATE);
