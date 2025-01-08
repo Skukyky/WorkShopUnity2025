@@ -18,6 +18,5 @@ public class OverHeatingView : MonoBehaviour
     {
         overHeat = weapon.overHeating / 100;
         slider.value = overHeat;
-        print(overHeat);
     }
 }

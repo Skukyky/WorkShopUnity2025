@@ -8,7 +8,7 @@ using UnityEngine;
 public class TargetScanner //IMPORTANT ne dérive pas de MonoBehaviour
 {
     //Rayon de détection autour de la créature
-    public float detectionRadius = 20;
+    public float detectionRadius = 20 ;
  
     //Angle de détection, pour simuler le champ de vision
     [Range(0.0f, 360.0f)]
@@ -45,6 +45,6 @@ public class TargetScanner //IMPORTANT ne dérive pas de MonoBehaviour
         }
  
         //Défaut, rien n'est détecté
-        return false;
+        return true;
     }
 }

@@ -47,5 +47,6 @@ public class MeleeWeapon : MonoBehaviour
 
         // Inflige les dégâts
         target.GetDamage(damage);
+        Destroy(target.gameObject);
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
@@ -8,14 +9,16 @@ public class MonsterController : MonoBehaviour
     public MeleeWeapon meleeWeapon;
     NavMeshAgent navMeshAgent;
     Animator animator;
+    private bool inBed = true;
 
     // Actions possibles
     const string TAKE_DAMAGE_STATE = "Take Damage";
     public const string DEFEATED_STATE = "Die";
     public const string WALK_STATE = "Crawl Forward Fast";
     public const string ATTACK_STATE = "Stomp Attack";
-
     public string currentAction;
+    private bool attacking = false;
+    private float time;
     
     //Scanner pour trouver des cibles
     public TargetScanner targetScanner;
@@ -27,6 +30,8 @@ public class MonsterController : MonoBehaviour
     public float delayLostTarget = 10f;
  
     private float timeLostTarget = 0;
+    
+    private Vector3 startLocation;
 
     private void Awake()
     {
@@ -48,13 +53,21 @@ public class MonsterController : MonoBehaviour
         Walk();
     }
 
+    private void Start()
+    {
+        startLocation = transform.position;
+    }
+
     private void Update()
     {
-        if (currentAction == DEFEATED_STATE)
+        if (currentAction == DEFEATED_STATE || player == null)
         {
             navMeshAgent.ResetPath();
+            animator.SetBool(WALK_STATE, false);
             return;
         }
+        
+        FindingTarget();
 
         if (currentAction == TAKE_DAMAGE_STATE)
         {
@@ -62,50 +75,62 @@ public class MonsterController : MonoBehaviour
             TakingDamage();
             return;
         }
-
-        if (player != null)
+  
+        if (inBed == false && currentTarget == null)
         {
-            if (!MovingToTarget())
+            if (navMeshAgent.destination != startLocation)
             {
-                if (currentAction != ATTACK_STATE)
-                {
-                    Attack();
-                }
+                navMeshAgent.SetDestination(startLocation);
+                animator.SetBool(WALK_STATE, true);
             }
-        }
-        //Détection
-        FindingTarget();
- 
-        //Si pas de cible, ne fait rien
-        if (currentTarget == null)
-        {
-            //Defaut
-            navMeshAgent.ResetPath();
-            animator.SetBool(WALK_STATE, false);
+    
+            if (navMeshAgent.remainingDistance < 2.5 )
+            {
+                animator.SetBool(WALK_STATE, false);
+                print("coucou");
+                inBed = true;
+            }
             return;
         }
+        //Détection
+      
  
- 
+        // //Si pas de cible, ne fait rien
+        // if (currentTarget == null)
+        // {
+        //     //Defaut
+        //     navMeshAgent.ResetPath();
+        //     return;
+        // }
+        
         //Est-ce que l'IA se déplace vers le joueur ?
         if (MovingToTarget())
         {
+            attacking = false;
+            animator.SetBool(WALK_STATE, true);
+            return;
             //En train de marcher
-            return;
         }
- 
- 
-        //Attaque
-        if (currentAction != ATTACK_STATE && currentAction != TAKE_DAMAGE_STATE)
+        else
         {
-            Attack();
-            return;
+            animator.SetBool(WALK_STATE, false);
         }
 
-        if (currentAction == ATTACK_STATE)
+        //Attaque
+        
+        if (currentAction != ATTACK_STATE && currentAction != TAKE_DAMAGE_STATE && attacking)
         {
+            time = Time.time + 0.25f;
             Attack();
-            return;
         }
+
+        if (Time.time > time)
+        {
+            animator.SetBool(ATTACK_STATE, false);
+        }
+        
+        
+        return;
     }
     
 
@@ -133,28 +158,30 @@ public class MonsterController : MonoBehaviour
 
     private bool MovingToTarget()
     {
-        if (navMeshAgent.destination != player.transform.position)
+        if (currentTarget != null)
         {
-            navMeshAgent.SetDestination(player.transform.position);
-        }
+            navMeshAgent.SetDestination(currentTarget.transform.position);
 
-        if (navMeshAgent.remainingDistance == 0)
-            return true;
+            if (navMeshAgent.remainingDistance > navMeshAgent.stoppingDistance)
+            {
+                if (currentAction != WALK_STATE)
+                {
+                    Walk();
+                }
 
-        if (navMeshAgent.remainingDistance > navMeshAgent.stoppingDistance)
-        {
-            if (currentAction != WALK_STATE)
-                Walk();
-        }
-        else
-        {
+                return true;
+            }
+
+            if (navMeshAgent.remainingDistance <= 2.5)
+            {
+                attacking = true;
+            }
+            
             RotateToTarget(currentTarget.transform);
-            return false;
         }
-
-        return true;
+        return false;
     }
-
+    
     //Cherche une cible
     private void FindingTarget()
     {
@@ -164,7 +191,7 @@ public class MonsterController : MonoBehaviour
             currentTarget = player;
             timeLostTarget = 0;
             return;
-        }
+        } 
  
         //Si le joueur était détecté
         //Calcule le temps avant d'abandonner
@@ -174,17 +201,13 @@ public class MonsterController : MonoBehaviour
  
             if (timeLostTarget > delayLostTarget)
             {
+                inBed = false;
                 timeLostTarget = 0;
-                currentTarget = null;
             }
- 
- 
-            return;
-        }
- 
- 
+            else return; 
+        } 
+        animator.SetBool(WALK_STATE, false);
         currentTarget = null;
- 
     }
     
     private void Walk()
