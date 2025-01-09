@@ -966,6 +966,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   isAttacking: 1
+  playerFPS: {fileID: 0}
 --- !u!1 &5302223817793923102
 GameObject:
   m_ObjectHideFlags: 0
@@ -1563,7 +1564,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.015571658, w: 0.9998788}
   m_LocalPosition: {x: 5.12, y: 0.68, z: 2.75}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 9196070992873397573}
