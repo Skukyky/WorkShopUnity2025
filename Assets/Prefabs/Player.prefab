@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 5658800172481161510}
   - component: {fileID: 4466287716985650802}
   - component: {fileID: 5715866159907354146}
+  - component: {fileID: 222749938317818813}
   m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
@@ -183,6 +184,19 @@ MonoBehaviour:
   hitPoint: 0
   isInvulnerable: 0
   invulnerabiltyTime: 0.5
+--- !u!114 &222749938317818813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5639269873695987511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdab7557ba0b24f4fb13cfa21508cff3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items: 0
 --- !u!1 &5662240955619092580
 GameObject:
   m_ObjectHideFlags: 0
@@ -397,15 +411,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9d5a33fce07758d4c8bdee73c591601a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.357
+      value: 0.35700116
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9d5a33fce07758d4c8bdee73c591601a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.304
+      value: -0.30400002
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9d5a33fce07758d4c8bdee73c591601a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.536
+      value: 0.5360004
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9d5a33fce07758d4c8bdee73c591601a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -413,7 +427,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9d5a33fce07758d4c8bdee73c591601a, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9d5a33fce07758d4c8bdee73c591601a, type: 3}
       propertyPath: m_LocalRotation.y
@@ -421,7 +435,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9d5a33fce07758d4c8bdee73c591601a, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9d5a33fce07758d4c8bdee73c591601a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

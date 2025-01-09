@@ -6,7 +6,7 @@ public class inventory : MonoBehaviour
 
     public void Energize()
     {
-        if (items ! >= 2)
+        if (items < 2)
         {
             items++;
             print(items);

@@ -1,12 +1,20 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class recupItem : MonoBehaviour
 {
-    private inventory inventory;
-    
-    void recupItems()
+    public inventory inventory;
+    public void recupItems()
     {
+        print("recupItems");
         inventory.Energize();
-        Destroy(gameObject);
+        ParticleSystem[] Obj = GetComponentsInChildren<ParticleSystem>();
+        if (inventory.items < 2)
+        {
+            foreach (ParticleSystem O in Obj)
+            {
+                Destroy(O);
+            }
+        }
     }
 }

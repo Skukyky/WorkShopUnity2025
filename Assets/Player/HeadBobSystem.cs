@@ -50,6 +50,7 @@ public class HeadBobSystem : MonoBehaviour
     {
         float inputMagnitude = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")).magnitude;
         if (inputMagnitude > 0) StartHeadBob();
+        else StopHeadBob();
     }
 
     private Vector3 StartHeadBob()
@@ -64,10 +65,6 @@ public class HeadBobSystem : MonoBehaviour
 
     private void StopHeadBob()
     {
-        if (transform.localPosition == _startPos) return;
         transform.localPosition = Vector3.Lerp(transform.localPosition, _startPos, 1*Time.deltaTime);
     }
-    
-    
-    
 }

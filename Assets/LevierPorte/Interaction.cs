@@ -41,9 +41,14 @@ public class Interaction : MonoBehaviour
 
             print("Target");
 
-            // V�rifie si le raycast a touch� quelque chose
+            
             if (Physics.Raycast(rayOrigin, _fpsCam.transform.forward,out hit, weaponRange, layerMask))
             {
+                if (hit.collider.gameObject.layer == 6)
+                {
+                    hit.collider.GetComponent<recupItem>().recupItems();
+                }
+                else if (hit.collider.gameObject.layer == 3)
                     hit.collider.GetComponent<OpenGate>().g.Onstarted();
             }
         }
