@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,6 +14,10 @@ public class MeleeWeapon : MonoBehaviour
     // Est-ce que l'arme est en train d'être utilisée ?
     public bool isAttacking = false;
 
+    Collider playerCollider;
+    public PlayerFPS playerFPS;
+
+
     public void StartAttack()
     {
         isAttacking = true;
@@ -23,30 +28,28 @@ public class MeleeWeapon : MonoBehaviour
         isAttacking = false;
     }
 
-    // Quand MeleeWeapon entre en collision avec objet
     private void OnTriggerEnter(Collider other)
+    {
+        playerCollider = other;
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        playerCollider = null;
+    }
+
+    private void Update()
     {
 
         if (!isAttacking)
         {
             return;
         }
-
-        // Vérifie le LayerMask
-        if ((layerMask.value & (1 << other.gameObject.layer)) == 0)
-        {
-            return;
-        }
-
-        // Vérifie si l'objet peut recevoir des dégâts
-        ReceiveDamage target = other.GetComponent<ReceiveDamage>();
-        if (target == null)
-        {
-            return;
-        }
-
+        
         // Inflige les dégâts
-        target.GetDamage(damage);
-        Destroy(target.gameObject);
+        playerFPS.GetComponent<receiveDamagePlayer>().GetDamage(damage);
+        print(damage);
+        StopAttack();
+        return;
     }
 }

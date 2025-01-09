@@ -12,7 +12,7 @@ public class TargetScanner //IMPORTANT ne dérive pas de MonoBehaviour
  
     //Angle de détection, pour simuler le champ de vision
     [Range(0.0f, 360.0f)]
-    public float detectionAngle = 270;
+    public float detectionAngle = 120;
  
     //Obsacle qui bloque le champ de vision
     public LayerMask obstacleLayerMask;
@@ -43,8 +43,6 @@ public class TargetScanner //IMPORTANT ne dérive pas de MonoBehaviour
                 return true;
  
         }
- 
-        //Défaut, rien n'est détecté
         return true;
     }
 }

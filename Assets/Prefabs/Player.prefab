@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 201601459439346064}
   - component: {fileID: 4500456298335996303}
   - component: {fileID: 5658800172481161510}
-  - component: {fileID: 8772380836610559748}
   - component: {fileID: 4466287716985650802}
+  - component: {fileID: 5715866159907354146}
   m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
@@ -151,22 +151,6 @@ MonoBehaviour:
   _data:
     _json: '{"declarations":{"Kind":"Object","collection":{"$content":[],"$version":"A"},"$version":"A"}}'
     _objectReferences: []
---- !u!114 &8772380836610559748
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5639269873695987511}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 975fa0b95b7b5b147af0cd0d49ecfef7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHitPoint: 100
-  hitPoint: 0
-  isInvulnerable: 0
-  invulnerabiltyTime: 0.5
 --- !u!114 &4466287716985650802
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,6 +167,22 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 8
+--- !u!114 &5715866159907354146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5639269873695987511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efbe1895867ce2749a2a9343c7265bef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHitPoint: 100
+  hitPoint: 0
+  isInvulnerable: 0
+  invulnerabiltyTime: 0.5
 --- !u!1 &5662240955619092580
 GameObject:
   m_ObjectHideFlags: 0

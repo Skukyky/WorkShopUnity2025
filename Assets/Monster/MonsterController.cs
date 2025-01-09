@@ -40,6 +40,16 @@ public class MonsterController : MonoBehaviour
         player = FindObjectOfType<PlayerFPS>().gameObject;
     }
 
+    IEnumerator ExecuteAfterDelay(float delay)
+    {
+        // Attendre pendant le délai
+        yield return new WaitForSeconds(delay);
+
+        meleeWeapon.StartAttack();
+    }
+    
+    
+    
     private IEnumerator DestroyAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
@@ -87,7 +97,6 @@ public class MonsterController : MonoBehaviour
             if (navMeshAgent.remainingDistance < 2.5 )
             {
                 animator.SetBool(WALK_STATE, false);
-                print("coucou");
                 inBed = true;
             }
             return;
@@ -110,27 +119,16 @@ public class MonsterController : MonoBehaviour
             animator.SetBool(WALK_STATE, true);
             return;
             //En train de marcher
-        }
-        else
-        {
-            animator.SetBool(WALK_STATE, false);
-        }
+        } 
+        animator.SetBool(WALK_STATE, false);
+        
 
         //Attaque
-        
-        if (currentAction != ATTACK_STATE && currentAction != TAKE_DAMAGE_STATE && attacking)
+        if (attacking && Time.time > time && Vector3.Distance(transform.position, currentTarget.transform.position) < 3.0f )
         {
-            time = Time.time + 0.25f;
+            time = Time.time + 1.7f;
             Attack();
         }
-
-        if (Time.time > time)
-        {
-            animator.SetBool(ATTACK_STATE, false);
-        }
-        
-        
-        return;
     }
     
 
@@ -171,12 +169,8 @@ public class MonsterController : MonoBehaviour
 
                 return true;
             }
-
-            if (navMeshAgent.remainingDistance <= 2.5)
-            {
-                attacking = true;
-            }
             
+            attacking = true;
             RotateToTarget(currentTarget.transform);
         }
         return false;
@@ -218,6 +212,8 @@ public class MonsterController : MonoBehaviour
     private void Attack()
     {
         SetActionState(ATTACK_STATE);
+        
+        StartCoroutine(ExecuteAfterDelay(0.5f));
     }
 
     private void RotateToTarget(Transform target)
