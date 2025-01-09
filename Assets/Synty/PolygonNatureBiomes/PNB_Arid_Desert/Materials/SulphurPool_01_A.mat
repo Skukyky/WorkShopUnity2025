@@ -8,18 +8,16 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: SulphurPool_01_A
-  m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 79c302345eca9054c99a53cd9bf85850, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords:
-  - _NORMALMAP
+  m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
-  stringTagMap:
-    RenderType: Opaque
+  stringTagMap: {}
   disabledShaderPasses:
   - MOTIONVECTORS
   m_LockedProperties: 
@@ -112,6 +110,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - Depth_Fade: 1
+    - Smooth: 0.5
+    - Speed: 2
+    - Vector1_b477c45853f247c4b3ec903cfac6b438: 2
+    - Vector1_c892da3e47c54e8a865a0935bf75ad0a: 0.0002
     - _AddPrecomputedVelocity: 0
     - _AlphaClip: 0
     - _AlphaToMask: 0
@@ -156,6 +159,7 @@ Material:
     - _OpacityMulti: 1
     - _OverallFalloff: 0.76
     - _Parallax: 0.02
+    - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _ReflectionPower: 0.346
@@ -181,7 +185,11 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     - __dirty: 0
+    - scale: 0.2
     m_Colors:
+    - Color_07d66dbf459a427290c7b0403283d67f: {r: 0, g: 0, b: 0, a: 0}
+    - Deep: {r: 0.28627452, g: 0.6745098, b: 0.7921569, a: 1}
+    - Shallow: {r: 0, g: 0, b: 0, a: 0}
     - _AlbedoTint: {r: 1, g: 1, b: 1, a: 0}
     - _BaseColor: {r: 0.28627452, g: 0.6745098, b: 0.7921569, a: 1}
     - _Color: {r: 0.2862745, g: 0.6745098, b: 0.7921569, a: 1}

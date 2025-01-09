@@ -21,30 +21,28 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: SulphurPool_01
-  m_Shader: {fileID: 4800000, guid: b7839dad95683814aa64166edc107ae2, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 79c302345eca9054c99a53cd9bf85850, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords:
-  - _NORMALMAP
-  m_InvalidKeywords:
-  - _FLIPBOOKBLENDING_OFF
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
-  stringTagMap:
-    RenderType: Opaque
-  disabledShaderPasses: []
+  stringTagMap: {}
+  disabledShaderPasses:
+  - MOTIONVECTORS
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: b71bcecce6ba97c4ab4218b9dcd4de74, type: 3}
+        m_Texture: {fileID: 2800000, guid: e4c83886e423af540b2767e694d93e33, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 52a23b694f1affe46bec72fc4b809bf0, type: 3}
+        m_Texture: {fileID: 2800000, guid: a954bf9d99070634181981a97b088b8a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
@@ -55,8 +53,25 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - Depth_Fade: 0.05
+    - Smooth: 0.1
+    - Speed: 0.45
+    - Vector1_b477c45853f247c4b3ec903cfac6b438: 2
+    - Vector1_c892da3e47c54e8a865a0935bf75ad0a: 0.0005
     - _AlphaClip: 0
     - _AlphaToMask: 0
     - _Blend: 0
@@ -86,6 +101,7 @@ Material:
     - _OpacityFalloff: 1
     - _OpacityMin: 0.5
     - _OpacityMulti: 1
+    - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _Smoothness: 0.477
@@ -101,11 +117,15 @@ Material:
     - _Surface: 0
     - _ZWrite: 1
     - __dirty: 0
+    - scale: 1
     m_Colors:
-    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - Color_07d66dbf459a427290c7b0403283d67f: {r: 0.81111515, g: 1, b: 0, a: 0}
+    - Deep: {r: 0.78058326, g: 0.8352941, b: 0, a: 1}
+    - Shallow: {r: 0.77309614, g: 1, b: 0.10849059, a: 0}
+    - _BaseColor: {r: 0.64385533, g: 0.8962264, b: 0.17332679, a: 1}
     - _BaseColorAddSubDiff: {r: 0, g: 0, b: 0, a: 0}
     - _CameraFadeParams: {r: 0, g: 0, b: 0, a: 0}
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 0.64385533, g: 0.8962264, b: 0.17332676, a: 1}
     - _DeepColor: {r: 0.27205566, g: 0.4433962, b: 0.11084905, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _ShallowColor: {r: 0.8301887, g: 0.66970795, b: 0.090067655, a: 0}
