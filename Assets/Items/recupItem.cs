@@ -7,10 +7,11 @@ public class recupItem : MonoBehaviour
     public void recupItems()
     {
         print("recupItems");
-        inventory.Energize();
         ParticleSystem[] Obj = GetComponentsInChildren<ParticleSystem>();
         if (inventory.items < 2)
         {
+            inventory.Energize();
+            print(inventory.items);
             foreach (ParticleSystem O in Obj)
             {
                 Destroy(O);
