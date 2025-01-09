@@ -1741,7 +1741,7 @@ MonoBehaviour:
   meleeWeapon: {fileID: 3105158009084219580}
   currentAction: 
   targetScanner:
-    detectionRadius: 20
+    detectionRadius: 10
     detectionAngle: 270
     obstacleLayerMask:
       serializedVersion: 2
