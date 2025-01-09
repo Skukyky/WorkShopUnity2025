@@ -4,8 +4,10 @@ using UnityEngine;
  
 public class ReceiveAction : MonoBehaviour
 {
+    public Quest1 quest1;
+    
     //Maximum de points de vie
-    public int maxHitPoint = 5;
+    public int maxHitPoint = 1;
  
     //Points de vie actuels
     public int hitPoint = 0;
@@ -26,7 +28,7 @@ public class ReceiveAction : MonoBehaviour
         //Si les point de vie sont inférieurs à 1 = Supprime l'objet
         if(hitPoint < 1)
         {
-            Destroy(gameObject);
+            gameObject.GetComponentInChildren<Quest1>().updateBall();
         }
     }
 }
