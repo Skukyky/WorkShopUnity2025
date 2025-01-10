@@ -28,7 +28,7 @@ public class ReceiveAction : MonoBehaviour
         //Si les point de vie sont inférieurs à 1 = Supprime l'objet
         if(hitPoint < 1)
         {
-            gameObject.GetComponentInChildren<Quest1>().updateBall();
+            quest1.updateBall();
         }
     }
 }
