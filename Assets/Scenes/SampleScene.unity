@@ -296,9 +296,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7ad977f0f47ac24bb4a2b2748239145, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quest1: {fileID: 0}
-  maxHitPoint: 5
-  hitPoint: 0
 --- !u!54 &139767994
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3298,6 +3295,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6936505999966595522, guid: edb3695e7ed53784bbac3b9d5c6bdc02, type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 1881930037}
     - target: {fileID: 8828873083808957329, guid: edb3695e7ed53784bbac3b9d5c6bdc02, type: 3}
       propertyPath: weapon
       value: 

@@ -12,6 +12,7 @@ public class Interaction : MonoBehaviour
 
     //D�termine sur quel Layer on peut tirer
     public LayerMask layerMask;
+    
 
 
 
@@ -45,7 +46,10 @@ public class Interaction : MonoBehaviour
                 else if (hit.collider.gameObject.layer == 3)
                     hit.collider.GetComponent<OpenGate>().g.Onstarted();
                 else if (hit.collider.gameObject.layer == 8)
+                {
                     hit.collider.GetComponent<RefullSpaceShip>().AddEnergy(gameObject);
+                }
+                
             }
         }
     }
