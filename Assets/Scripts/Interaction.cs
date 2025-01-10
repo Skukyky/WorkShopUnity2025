@@ -29,7 +29,6 @@ public class Interaction : MonoBehaviour
         // Time.time > nextFire : v�rifie si suffisament de temps s'est �coul� pour pouvoir tirer � nouveau
         if (Input.GetButtonDown("Interact"))
         {
-            print("Interact");
 
             //On va lancer un rayon invisible qui simulera les balles du gun
 
@@ -38,18 +37,15 @@ public class Interaction : MonoBehaviour
 
             //RaycastHit : permet de savoir ce que le rayon a touch�
             RaycastHit hit;
-
-            print("Target");
-
             
             if (Physics.Raycast(rayOrigin, _fpsCam.transform.forward,out hit, weaponRange, layerMask))
             {
                 if (hit.collider.gameObject.layer == 6)
-                {
                     hit.collider.GetComponent<recupItem>().recupItems();
-                }
                 else if (hit.collider.gameObject.layer == 3)
                     hit.collider.GetComponent<OpenGate>().g.Onstarted();
+                else if (hit.collider.gameObject.layer == 8)
+                    hit.collider.GetComponent<RefullSpaceShip>().AddEnergy(gameObject);
             }
         }
     }
