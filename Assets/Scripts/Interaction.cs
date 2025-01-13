@@ -44,7 +44,7 @@ public class Interaction : MonoBehaviour
                 if (hit.collider.gameObject.layer == 6)
                     hit.collider.GetComponent<recupItem>().recupItems();
                 else if (hit.collider.gameObject.layer == 3)
-                    hit.collider.GetComponent<OpenGate>().g.Onstarted();
+                    hit.collider.GetComponent<OpenGate>().OnPress();
                 else if (hit.collider.gameObject.layer == 8)
                 {
                     hit.collider.GetComponent<RefullSpaceShip>().AddEnergy(gameObject);
