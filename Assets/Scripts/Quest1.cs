@@ -4,7 +4,7 @@ using UnityEngine;
 public class Quest1 : MonoBehaviour
 {
     public int maxNombreBallToDestroy;
-    public int nombreBallToDestroy;
+    private int nombreBallToDestroy;
 
     private void Start()
     {

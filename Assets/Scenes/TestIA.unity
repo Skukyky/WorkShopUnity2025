@@ -179,10 +179,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrainingCible (3)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5766476650023807835, guid: 6783c518bd482bb449d92c44d323b790, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 641055939063639552, guid: 6783c518bd482bb449d92c44d323b790, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 692285263}
   m_SourcePrefab: {fileID: 100100000, guid: 6783c518bd482bb449d92c44d323b790, type: 3}
 --- !u!54 &270328196
 Rigidbody:
@@ -415,11 +419,35 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrainingCible (4)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5766476650023807835, guid: 6783c518bd482bb449d92c44d323b790, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 641055939063639552, guid: 6783c518bd482bb449d92c44d323b790, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 773012747}
   m_SourcePrefab: {fileID: 100100000, guid: 6783c518bd482bb449d92c44d323b790, type: 3}
+--- !u!1 &647354361 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 641055939063639552, guid: 6783c518bd482bb449d92c44d323b790, type: 3}
+  m_PrefabInstance: {fileID: 1550930644}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &647354367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 647354361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d43822af6e3b2c640b4a53a6ba04b5cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quest1: {fileID: 1731250437}
+  maxHitPoint: 1
+  hitPoint: 0
 --- !u!1001 &660335085
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -565,11 +593,35 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrainingCible (5)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5766476650023807835, guid: 6783c518bd482bb449d92c44d323b790, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 641055939063639552, guid: 6783c518bd482bb449d92c44d323b790, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1608642849}
   m_SourcePrefab: {fileID: 100100000, guid: 6783c518bd482bb449d92c44d323b790, type: 3}
+--- !u!1 &692285257 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 641055939063639552, guid: 6783c518bd482bb449d92c44d323b790, type: 3}
+  m_PrefabInstance: {fileID: 261504683}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &692285263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 692285257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d43822af6e3b2c640b4a53a6ba04b5cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quest1: {fileID: 1731250437}
+  maxHitPoint: 1
+  hitPoint: 0
 --- !u!114 &695691157 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7580792863653377702, guid: 24b5b7b62df86194cb9af88ef9df457a, type: 3}
@@ -851,6 +903,26 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f07a0f80234d2e249a81ac29d9635d12, type: 3}
+--- !u!1 &773012741 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 641055939063639552, guid: 6783c518bd482bb449d92c44d323b790, type: 3}
+  m_PrefabInstance: {fileID: 541486956}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &773012747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 773012741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d43822af6e3b2c640b4a53a6ba04b5cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quest1: {fileID: 1731250437}
+  maxHitPoint: 1
+  hitPoint: 0
 --- !u!1 &849754141
 GameObject:
   m_ObjectHideFlags: 0
@@ -1281,10 +1353,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrainingCible (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5766476650023807835, guid: 6783c518bd482bb449d92c44d323b790, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 641055939063639552, guid: 6783c518bd482bb449d92c44d323b790, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1276861791}
   m_SourcePrefab: {fileID: 100100000, guid: 6783c518bd482bb449d92c44d323b790, type: 3}
 --- !u!1001 &1200814176
 PrefabInstance:
@@ -1386,6 +1462,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6936505999966595522, guid: edb3695e7ed53784bbac3b9d5c6bdc02, type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 727689890}
     - target: {fileID: 8828873083808957329, guid: edb3695e7ed53784bbac3b9d5c6bdc02, type: 3}
       propertyPath: weapon
       value: 
@@ -1395,6 +1475,26 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: edb3695e7ed53784bbac3b9d5c6bdc02, type: 3}
+--- !u!1 &1276861785 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 641055939063639552, guid: 6783c518bd482bb449d92c44d323b790, type: 3}
+  m_PrefabInstance: {fileID: 1127983604}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1276861791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1276861785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d43822af6e3b2c640b4a53a6ba04b5cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quest1: {fileID: 1731250437}
+  maxHitPoint: 1
+  hitPoint: 0
 --- !u!1 &1447138472
 GameObject:
   m_ObjectHideFlags: 0
@@ -1563,11 +1663,35 @@ PrefabInstance:
       propertyPath: m_Name
       value: TrainingCible (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5766476650023807835, guid: 6783c518bd482bb449d92c44d323b790, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 641055939063639552, guid: 6783c518bd482bb449d92c44d323b790, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 647354367}
   m_SourcePrefab: {fileID: 100100000, guid: 6783c518bd482bb449d92c44d323b790, type: 3}
+--- !u!1 &1608642843 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 641055939063639552, guid: 6783c518bd482bb449d92c44d323b790, type: 3}
+  m_PrefabInstance: {fileID: 678737067}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1608642849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608642843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d43822af6e3b2c640b4a53a6ba04b5cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quest1: {fileID: 1731250437}
+  maxHitPoint: 1
+  hitPoint: 0
 --- !u!1001 &1646329877
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1670,8 +1794,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7461f95bc26ccf24682be34663acbadc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxNombreBallToDestroy: 0
-  nombreBallToDestroy: 0
+  maxNombreBallToDestroy: 5
 --- !u!1 &1744669456
 GameObject:
   m_ObjectHideFlags: 0

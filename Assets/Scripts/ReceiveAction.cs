@@ -29,6 +29,7 @@ public class ReceiveAction : MonoBehaviour
         if(hitPoint < 1)
         {
             quest1.updateBall();
+            Destroy(gameObject);
         }
     }
 }
