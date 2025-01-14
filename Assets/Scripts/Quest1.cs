@@ -23,7 +23,7 @@ public class Quest1 : MonoBehaviour
         
         if (nombreBallToDestroy <= 0)
         {
-            print("gg");
+            GetComponent<recupItem>().canRecupItem = true;
         }
         else
         {
