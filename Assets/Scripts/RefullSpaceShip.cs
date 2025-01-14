@@ -1,9 +1,10 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RefullSpaceShip : MonoBehaviour
 {
     private inventory _inventory;
-    private float _numberofenergy;
+    public int _numberOfEnergy;
     
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -11,10 +12,19 @@ public class RefullSpaceShip : MonoBehaviour
     public void AddEnergy(GameObject player)
     {
         _inventory = player.GetComponent<inventory>();
-        _numberofenergy += _inventory.items;
+        _numberOfEnergy += _inventory.items;
         _inventory.items = 0;
-        print(_numberofenergy);
+        print(_numberOfEnergy);
+        if (_numberOfEnergy == 4)
+        {
+            Quit();
+        }
     }
-    
+
+    private void Quit()
+    {
+        Application.Quit();
+        print("Quit");
+    }
     
 }

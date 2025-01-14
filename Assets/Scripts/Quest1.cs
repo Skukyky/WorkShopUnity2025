@@ -3,12 +3,12 @@ using UnityEngine;
 
 public class Quest1 : MonoBehaviour
 {
-    public int maxNombreBallToDestroy;
+    public ReceiveAction[] ball;
     private int nombreBallToDestroy;
 
     private void Start()
     {
-        nombreBallToDestroy = maxNombreBallToDestroy;
+        nombreBallToDestroy = ball.Length;
     }
 
 

@@ -11,7 +11,7 @@ public class UiInventory : MonoBehaviour
 
     private void Update()
     {
-        valueText.text = "energy on yourself: " + inventory.items + "/2.";
+        valueText.text = "Energy on yourself: " + inventory.items + "/2.";
     }
 
 }
