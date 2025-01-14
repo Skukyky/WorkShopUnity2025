@@ -64,13 +64,37 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7617473759260770191, guid: d284455575406d846853a1e969e7d166, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -5873070570156848402, guid: d284455575406d846853a1e969e7d166, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -4619342603592232540, guid: d284455575406d846853a1e969e7d166, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: -3721283035383676635, guid: d284455575406d846853a1e969e7d166, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 7d0cd262a3aa2aa489da56b02e4a4cb4, type: 2}
+    - target: {fileID: -345587712321211360, guid: d284455575406d846853a1e969e7d166, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d284455575406d846853a1e969e7d166, type: 3}
       propertyPath: m_Name
       value: fighter1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d284455575406d846853a1e969e7d166, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8690287007744501643, guid: d284455575406d846853a1e969e7d166, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -78,14 +102,38 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d284455575406d846853a1e969e7d166, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 5781687963477413782}
+      addedObject: {fileID: 3480211841166433303}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d284455575406d846853a1e969e7d166, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1943716186847620753}
   m_SourcePrefab: {fileID: 100100000, guid: d284455575406d846853a1e969e7d166, type: 3}
 --- !u!1 &1546909259313478368 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d284455575406d846853a1e969e7d166, type: 3}
   m_PrefabInstance: {fileID: 1852897095542458289}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &5781687963477413782
+--- !u!65 &3480211841166433303
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1546909259313478368}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.3, y: 0.2, z: 0.35}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1943716186847620753
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -97,3 +145,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4b06abd65ced6549b8f2a0f0647883d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _numberOfEnergy: 0
