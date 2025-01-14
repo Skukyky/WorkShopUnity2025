@@ -6,6 +6,9 @@ using UnityEngine.Serialization;
 
 public class ShootAction : MonoBehaviour
 {
+ 
+    private AudioManagement gunSound;
+    
     //Dommage que le Gun inflige
     public int gunDamage = 1;
 
@@ -40,6 +43,9 @@ public class ShootAction : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
+        gunSound = GetComponent<AudioManagement>();
+        
         //Référence de la caméra. GetComponentInParent<Camera> permet de chercher une Camera
         //dans ce GameObject et dans ses parents.
         _fpsCam = GetComponentInParent<Camera>();
@@ -74,8 +80,10 @@ public class ShootAction : MonoBehaviour
             {
                 overHeating = _overHeatingMax;
                 _overHeat = true;
+                gunSound.PlayReload();
             }
-
+            
+            gunSound.PlayGunShot();
             ShootAnimation();
 
 

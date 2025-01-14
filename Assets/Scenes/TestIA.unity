@@ -298,6 +298,10 @@ PrefabInstance:
       propertyPath: invulnerabiltyTime
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7641699603710592668, guid: 24b5b7b62df86194cb9af88ef9df457a, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8772380836610559748, guid: 24b5b7b62df86194cb9af88ef9df457a, type: 3}
       propertyPath: maxHitPoint
       value: 100
@@ -1920,15 +1924,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3205024729796041532, guid: f07a0f80234d2e249a81ac29d9635d12, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -19.244074
+      value: -18.82
       objectReference: {fileID: 0}
     - target: {fileID: 3205024729796041532, guid: f07a0f80234d2e249a81ac29d9635d12, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.0000038146973
+      value: 2.1
       objectReference: {fileID: 0}
     - target: {fileID: 3205024729796041532, guid: f07a0f80234d2e249a81ac29d9635d12, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -32.364155
+      value: -32.87
       objectReference: {fileID: 0}
     - target: {fileID: 3205024729796041532, guid: f07a0f80234d2e249a81ac29d9635d12, type: 3}
       propertyPath: m_LocalRotation.w
