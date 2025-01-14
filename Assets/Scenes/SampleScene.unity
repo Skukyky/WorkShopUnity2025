@@ -548,6 +548,10 @@ PrefabInstance:
       propertyPath: IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6231941642173345602, guid: fc5b53bf519f19944b1bcfc328b28e5a, type: 3}
+      propertyPath: PillonneGame2
+      value: 
+      objectReference: {fileID: 639251223}
     - target: {fileID: 6316023931700711154, guid: fc5b53bf519f19944b1bcfc328b28e5a, type: 3}
       propertyPath: m_Name
       value: Levier (1)
@@ -977,6 +981,10 @@ PrefabInstance:
       propertyPath: Open
       value: 
       objectReference: {fileID: 283268783}
+    - target: {fileID: 6231941642173345602, guid: fc5b53bf519f19944b1bcfc328b28e5a, type: 3}
+      propertyPath: PillonneGame2
+      value: 
+      objectReference: {fileID: 639251223}
     - target: {fileID: 6316023931700711154, guid: fc5b53bf519f19944b1bcfc328b28e5a, type: 3}
       propertyPath: m_Name
       value: Levier (2)
@@ -1168,6 +1176,10 @@ PrefabInstance:
       propertyPath: IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6231941642173345602, guid: fc5b53bf519f19944b1bcfc328b28e5a, type: 3}
+      propertyPath: PillonneGame2
+      value: 
+      objectReference: {fileID: 639251223}
     - target: {fileID: 6316023931700711154, guid: fc5b53bf519f19944b1bcfc328b28e5a, type: 3}
       propertyPath: m_Name
       value: Levier (3)
@@ -1765,8 +1777,44 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 305197132786566853, guid: f07a0f80234d2e249a81ac29d9635d12, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 639251223}
   m_SourcePrefab: {fileID: 100100000, guid: f07a0f80234d2e249a81ac29d9635d12, type: 3}
+--- !u!1 &639251222 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 305197132786566853, guid: f07a0f80234d2e249a81ac29d9635d12, type: 3}
+  m_PrefabInstance: {fileID: 639251221}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &639251223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 639251222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bbf65bc93cd36943b9c3386a44a8bb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  openGates:
+  - {fileID: 283268783}
+  - {fileID: 164086862}
+  - {fileID: 300248886}
+  - {fileID: 354815408}
+--- !u!114 &674779646 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1940203272784002878, guid: edb3695e7ed53784bbac3b9d5c6bdc02, type: 3}
+  m_PrefabInstance: {fileID: 5532641682995978642}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &686417929
 GameObject:
   m_ObjectHideFlags: 0
@@ -3390,6 +3438,10 @@ PrefabInstance:
       propertyPath: Open
       value: 
       objectReference: {fileID: 164086862}
+    - target: {fileID: 6231941642173345602, guid: fc5b53bf519f19944b1bcfc328b28e5a, type: 3}
+      propertyPath: PillonneGame2
+      value: 
+      objectReference: {fileID: 639251223}
     - target: {fileID: 6316023931700711154, guid: fc5b53bf519f19944b1bcfc328b28e5a, type: 3}
       propertyPath: m_Name
       value: Levier
@@ -3482,6 +3534,17 @@ Transform:
   - {fileID: 441685414}
   m_Father: {fileID: 397562198}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2136379225 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5715866159907354146, guid: 24b5b7b62df86194cb9af88ef9df457a, type: 3}
+  m_PrefabInstance: {fileID: 1596629621}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efbe1895867ce2749a2a9343c7265bef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2145179293
 GameObject:
   m_ObjectHideFlags: 0
@@ -3662,6 +3725,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4009052173539883714, guid: edb3695e7ed53784bbac3b9d5c6bdc02, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5549189522368335536, guid: edb3695e7ed53784bbac3b9d5c6bdc02, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -3670,16 +3737,29 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5780319726065867416, guid: edb3695e7ed53784bbac3b9d5c6bdc02, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6936505999966595522, guid: edb3695e7ed53784bbac3b9d5c6bdc02, type: 3}
       propertyPath: inventory
       value: 
       objectReference: {fileID: 1881930037}
+    - target: {fileID: 8597672717962945822, guid: edb3695e7ed53784bbac3b9d5c6bdc02, type: 3}
+      propertyPath: slider
+      value: 
+      objectReference: {fileID: 674779646}
+    - target: {fileID: 8597672717962945822, guid: edb3695e7ed53784bbac3b9d5c6bdc02, type: 3}
+      propertyPath: receiveDamagePlayer
+      value: 
+      objectReference: {fileID: 2136379225}
     - target: {fileID: 8828873083808957329, guid: edb3695e7ed53784bbac3b9d5c6bdc02, type: 3}
       propertyPath: weapon
       value: 
       objectReference: {fileID: 2008689424}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 3441081536934061114, guid: edb3695e7ed53784bbac3b9d5c6bdc02, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: edb3695e7ed53784bbac3b9d5c6bdc02, type: 3}

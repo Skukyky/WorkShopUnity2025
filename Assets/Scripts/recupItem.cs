@@ -4,11 +4,11 @@ using UnityEngine;
 public class recupItem : MonoBehaviour
 {
     public inventory inventory;
-    private bool canRecupItem = true;
+    [HideInInspector]
+    public bool canRecupItem = false;
     
     public void recupItems()
     {
-        print("recupItems");
         if (inventory.items < 2 && canRecupItem)
         {
             ParticleSystem[] Obj = GetComponentsInChildren<ParticleSystem>();
