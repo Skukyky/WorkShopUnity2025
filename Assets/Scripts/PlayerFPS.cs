@@ -1,5 +1,6 @@
 using UnityEngine;
- 
+using UnityEngine.InputSystem.iOS;
+
 public class PlayerFPS : MonoBehaviour
 {
     //Camera
@@ -26,13 +27,19 @@ public class PlayerFPS : MonoBehaviour
  
     //Marche ou court ?
     private bool isRunning = false;
+    
+    private bool isPaused = false;
  
     //Rotation de la caméra
     float rotationX = 0;
     public float rotationSpeed = 2.0f;
     public float rotationXLimit = 45.0f;
-     
- 
+    
+    [HideInInspector]
+    public float stamina; 
+    public float staminamax = 100.0f;
+    private bool staminaminou = true;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -41,11 +48,13 @@ public class PlayerFPS : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         characterController = GetComponent<CharacterController>();
         headBobSystem = GetComponentInChildren<HeadBobSystem>();
-    }
+        stamina = staminamax;
+}
  
     // Update is called once per frame
     void Update()
     { 
+        print("stamina");
         //Calcule les directions
         //forward = avant/arrière
         //right = droite/gauche
@@ -65,13 +74,14 @@ public class PlayerFPS : MonoBehaviour
  
  
         //Est-ce qu'on appuie sur le bouton pour courir (ici : Shift Gauche) ?
-        if (Input.GetButton("Sprint"))
+        if (Input.GetButton("Sprint")&& staminaminou)
         {
             //En train de courir
             isRunning = true;
             headBobSystem.amount = headBobSystem.amountRun;
             headBobSystem.frequency = headBobSystem.frequencyRun;
             headBobSystem.smooth = headBobSystem.smoothRun;
+            stamina -= 15f * Time.deltaTime;
         }
         else
         {
@@ -80,6 +90,10 @@ public class PlayerFPS : MonoBehaviour
             headBobSystem.amount = headBobSystem.amountwalk;
             headBobSystem.frequency = headBobSystem.frequencywalk;
             headBobSystem.smooth = headBobSystem.smoothwalk;
+            if (stamina < 100f)
+            {
+                stamina += 10f * Time.deltaTime;
+            }
         }
  
         // Est-ce que l'on court ?
@@ -105,10 +119,16 @@ public class PlayerFPS : MonoBehaviour
  
         
         // Est-ce qu'on appuie sur le bouton de saut (ici : Espace)
-        if (Input.GetButton("Jump") && characterController.isGrounded)
+        if (Input.GetButton("Jump") && characterController.isGrounded && staminaminou)
         {
  
             moveDirection.y = jumpSpeed;
+            stamina -= 30f;
+            if (stamina <= 0)
+            {
+                stamina = 0;
+                staminaminou = false;
+            }
         }
         else
         {
@@ -155,5 +175,15 @@ public class PlayerFPS : MonoBehaviour
         //Applique la rotation gauche/droite sur le Player
         
         transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * rotationSpeed, 0);
+
+        if (stamina <= 0)
+        {
+            staminaminou = false;
+        }
+
+        if (stamina >= 30)
+        {
+            staminaminou = true;
+        }
     }
 }

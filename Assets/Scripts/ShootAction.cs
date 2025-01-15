@@ -22,10 +22,11 @@ public class ShootAction : MonoBehaviour
     private Camera _fpsCam;
 
     //Temps entre chaque tir (en secondes) 
-    public float fireRate = 0.25f;
+    public float fireRate = 0.8f;
 
     //Float : mémorise le temps du prochain tir possible
     private float _nextFire;
+    private float nextTimeToFire;
 
     //Détermine sur quel Layer on peut tirer
     public LayerMask layerMask;
@@ -65,7 +66,7 @@ public class ShootAction : MonoBehaviour
             _overHeat = false;
         }
 
-        if (Time.time >= _nextFire) transform.localRotation = lookRifle;
+        if (Time.time >= nextTimeToFire) transform.localRotation = lookRifle;
 
         // Vérifie si le joueur a pressé le bouton pour faire feu (ex:bouton gauche souris)
         // Time.time > nextFire : vérifie si suffisament de temps s'est écoulé pour pouvoir tirer à nouveau
@@ -75,6 +76,7 @@ public class ShootAction : MonoBehaviour
             //Time.time = Temps écoulé depuis le lancement du jeu
             //temps du prochain tir = temps total écoulé + temps qu'il faut attendre
             _nextFire = Time.time + fireRate;
+            nextTimeToFire = Time.time + fireRate/2;
             overHeating += overHeatingRate;
             if (overHeating > _overHeatingMax)
             {
@@ -85,9 +87,7 @@ public class ShootAction : MonoBehaviour
             
             gunSound.PlayGunShot();
             ShootAnimation();
-
-
-            print(_nextFire);
+            
 
             //On va lancer un rayon invisible qui simulera les balles du gun
 

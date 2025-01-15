@@ -5,7 +5,7 @@ using UnityEngine.Serialization;
 public class Interaction : MonoBehaviour
 {
     //Port�e du tir
-    public float weaponRange = 200f;
+    public float weaponRange = 10f;
 
     //La cam�ra
     private Camera _fpsCam;
