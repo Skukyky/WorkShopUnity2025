@@ -33,10 +33,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 8173965195945831036}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -8.000061, y: -125.00006}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -53}
+  m_SizeDelta: {x: 0, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2488164193125824074
 CanvasRenderer:
@@ -68,8 +68,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'missing energy: 2/4'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d8b8397046d03784c8be7eb087d707a0, type: 2}
+  m_sharedMaterial: {fileID: -3454686206266057806, guid: d8b8397046d03784c8be7eb087d707a0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -491,7 +491,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -727, y: 413}
-  m_SizeDelta: {x: 200, y: 50}
+  m_SizeDelta: {x: 207.09, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7013146460350326344
 CanvasRenderer:
@@ -523,8 +523,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Energy on yourself: 0/2.'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d8b8397046d03784c8be7eb087d707a0, type: 2}
+  m_sharedMaterial: {fileID: -3454686206266057806, guid: d8b8397046d03784c8be7eb087d707a0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1165,8 +1165,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 72, y: 34}
-  m_SizeDelta: {x: 320, y: 40}
+  m_AnchoredPosition: {x: 25, y: 977}
+  m_SizeDelta: {x: 398.82, y: 40}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &4149589357713582665
 MonoBehaviour:
@@ -1508,9 +1508,9 @@ RectTransform:
   - {fileID: 2210823070835344043}
   - {fileID: 1729347598304325752}
   - {fileID: 5627017854462765673}
-  - {fileID: 8685694770962230950}
   - {fileID: 3423537539095197602}
   - {fileID: 8846072607984042208}
+  - {fileID: 8685694770962230950}
   - {fileID: 8173965195945831036}
   - {fileID: 5832791519706607478}
   - {fileID: 6889525064392160976}
@@ -1597,6 +1597,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 8613941147101578317}
+  Player: {fileID: 0}
 --- !u!1 &5553043523353901453
 GameObject:
   m_ObjectHideFlags: 0
@@ -1629,10 +1630,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 8173965195945831036}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.000061, y: 69.99994}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 34}
+  m_SizeDelta: {x: 0, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4313088137410489000
 CanvasRenderer:
@@ -1664,8 +1665,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Find the 4 artifacts to refuel your ship and leave this planet.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9ccb9114833755f46a86db93a32da594, type: 2}
+  m_sharedMaterial: {fileID: 3563177465327878260, guid: 9ccb9114833755f46a86db93a32da594, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1689,8 +1690,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 33
+  m_fontSizeBase: 33
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2344,7 +2345,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 10, y: 10}
+  m_SizeDelta: {x: 15, y: 15}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &659304731506504804
 CanvasRenderer:
@@ -2374,7 +2375,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: 328b772205de2734a932138c565cdfb7, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -2697,6 +2698,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b947a8becbeb94045a3d42b0f5659500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvas: {fileID: 0}
 --- !u!1 &8783233972067493565
 GameObject:
   m_ObjectHideFlags: 0
@@ -2769,8 +2771,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 829, y: 323}
-  m_SizeDelta: {x: 225, y: 400}
+  m_AnchoredPosition: {x: 583, y: 424}
+  m_SizeDelta: {x: 699.1, y: 161.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7187161927188448765
 CanvasRenderer:

@@ -137,6 +137,9 @@ MonoBehaviour:
   gravity: 10
   rotationSpeed: 2
   rotationXLimit: 45
+  stamina: 0
+  staminamax: 100
+  shoot: {fileID: 7580792863653377702}
 --- !u!114 &5658800172481161510
 MonoBehaviour:
   m_ObjectHideFlags: 0

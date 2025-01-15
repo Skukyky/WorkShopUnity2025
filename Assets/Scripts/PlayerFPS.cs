@@ -1,3 +1,4 @@
+using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.InputSystem.iOS;
 
@@ -39,6 +40,8 @@ public class PlayerFPS : MonoBehaviour
     public float stamina; 
     public float staminamax = 100.0f;
     private bool staminaminou = true;
+
+    public ShootAction shoot;
     
     // Start is called before the first frame update
     void Start()
@@ -71,6 +74,11 @@ public class PlayerFPS : MonoBehaviour
  
         // Y = axe haut/bas
         float speedY = moveDirection.y;
+
+        if (Input.GetButtonDown("Fire1"))
+        {
+            shoot.shoot();
+        }
  
  
         //Est-ce qu'on appuie sur le bouton pour courir (ici : Shift Gauche) ?

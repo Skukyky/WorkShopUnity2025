@@ -65,12 +65,17 @@ public class ShootAction : MonoBehaviour
         {
             _overHeat = false;
         }
-
         if (Time.time >= nextTimeToFire) transform.localRotation = lookRifle;
+
+        
+    }
+
+    public void shoot()
+    {
 
         // Vérifie si le joueur a pressé le bouton pour faire feu (ex:bouton gauche souris)
         // Time.time > nextFire : vérifie si suffisament de temps s'est écoulé pour pouvoir tirer à nouveau
-        if (Input.GetButtonDown("Fire1") && Time.time > _nextFire && overHeating < _overHeatingMax && !_overHeat)
+        if (Time.time > _nextFire && !_overHeat)
         {
             //Met à jour le temps pour le prochain tir
             //Time.time = Temps écoulé depuis le lancement du jeu
@@ -114,7 +119,6 @@ public class ShootAction : MonoBehaviour
                     //Envoie les dommages à la cible
                     hit.collider.gameObject.GetComponentInChildren<ReceiveAction>().GetDamage(gunDamage);
                 }
-
             }
         }
     }
