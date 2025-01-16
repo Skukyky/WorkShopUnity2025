@@ -96,6 +96,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 1c6ccacf85504b044b2e38bb31978a4a, type: 3}
+      propertyPath: 'm_Materials.Array.data[3]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 2e8929cc097868d4895dfd8c17b6b170, type: 2}
     - target: {fileID: 919132149155446097, guid: 1c6ccacf85504b044b2e38bb31978a4a, type: 3}
       propertyPath: m_Name
       value: LPSciFi_FuelCell
@@ -114,6 +118,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1c6ccacf85504b044b2e38bb31978a4a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4050340680164169606}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1c6ccacf85504b044b2e38bb31978a4a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8160981213493921345}
   m_SourcePrefab: {fileID: 100100000, guid: 1c6ccacf85504b044b2e38bb31978a4a, type: 3}
 --- !u!4 &2555761972311341923 stripped
 Transform:
@@ -161,3 +168,15 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.010593981, y: 0.010106457, z: 0.016467303}
   m_Center: {x: 0.000000003259629, y: -0.0002759194, z: 0}
+--- !u!122 &8160981213493921345
+Halo:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2899248702711521753}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_Size: 50
