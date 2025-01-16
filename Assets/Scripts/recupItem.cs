@@ -7,7 +7,11 @@ public class recupItem : MonoBehaviour
     [HideInInspector]
     public bool canRecupItem = false;
     private AudioInteractionmanager audioInteractionmanager;
-    
+
+    void Start()
+    {
+        audioInteractionmanager = GetComponent<AudioInteractionmanager>();
+    }
     public void recupItems()
     {
         if (inventory.items < 2 && canRecupItem)
