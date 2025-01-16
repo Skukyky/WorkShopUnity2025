@@ -57,7 +57,6 @@ public class PlayerFPS : MonoBehaviour
     // Update is called once per frame
     void Update()
     { 
-        print("stamina");
         //Calcule les directions
         //forward = avant/arrière
         //right = droite/gauche

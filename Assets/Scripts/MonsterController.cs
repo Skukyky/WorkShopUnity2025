@@ -10,6 +10,8 @@ public class MonsterController : MonoBehaviour
     NavMeshAgent navMeshAgent;
     Animator animator;
     private bool inBed = true;
+    
+    private AudioMonsterManager audioMonsterManager;
 
     // Actions possibles
     const string TAKE_DAMAGE_STATE = "Take Damage";
@@ -66,6 +68,8 @@ public class MonsterController : MonoBehaviour
     private void Start()
     {
         startLocation = transform.position;
+        audioMonsterManager = GetComponent<AudioMonsterManager>();
+        audioMonsterManager.Sound(1.0f);
     }
 
     private void Update()
@@ -94,7 +98,7 @@ public class MonsterController : MonoBehaviour
                 animator.SetBool(WALK_STATE, true);
             }
     
-            if (navMeshAgent.remainingDistance < 2.5 )
+            if (navMeshAgent.remainingDistance < 2.0 )
             {
                 animator.SetBool(WALK_STATE, false);
                 inBed = true;
@@ -102,15 +106,6 @@ public class MonsterController : MonoBehaviour
             return;
         }
         //Détection
-      
- 
-        // //Si pas de cible, ne fait rien
-        // if (currentTarget == null)
-        // {
-        //     //Defaut
-        //     navMeshAgent.ResetPath();
-        //     return;
-        // }
         
         //Est-ce que l'IA se déplace vers le joueur ?
         if (MovingToTarget())
