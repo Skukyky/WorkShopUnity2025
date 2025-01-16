@@ -5,6 +5,7 @@ public class AudioInteractionmanager : MonoBehaviour
     private AudioSource audioSource;
     public AudioClip levier;
     public AudioClip cristal;
+    public AudioClip interact;
     
     
     void Start()
@@ -22,6 +23,11 @@ public class AudioInteractionmanager : MonoBehaviour
     public void useCristal()
     {
         audioSource.PlayOneShot(cristal);
+    }
+
+    public void useInteract()
+    {
+        audioSource.PlayOneShot(interact);
     }
     
     

@@ -4,6 +4,7 @@ public class Game2 : MonoBehaviour
 {
     private bool isValid;
     public OpenGate[] openGates;
+    private AudioInteractionmanager audioInteractionmanager;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void Verify()
@@ -20,6 +21,7 @@ public class Game2 : MonoBehaviour
         if (isValid)
         {
             GetComponent<recupItem>().canRecupItem = true;
+            audioInteractionmanager.useCristal();
         }
     }
 }

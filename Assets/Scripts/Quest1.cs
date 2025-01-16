@@ -5,10 +5,12 @@ public class Quest1 : MonoBehaviour
 {
     public ReceiveAction[] ball;
     private int nombreBallToDestroy;
-
+    private AudioInteractionmanager audioInteractionmanager;
+    
     private void Start()
     {
         nombreBallToDestroy = ball.Length;
+        audioInteractionmanager = GetComponent<AudioInteractionmanager>();
     }
 
 
@@ -24,6 +26,7 @@ public class Quest1 : MonoBehaviour
         if (nombreBallToDestroy <= 0)
         {
             GetComponent<recupItem>().canRecupItem = true;
+            audioInteractionmanager.useCristal();
         }
         else
         {
