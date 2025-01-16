@@ -1,6 +1,4 @@
-using UnityEditor.SceneManagement;
 using UnityEngine;
-using UnityEngine.InputSystem.iOS;
 
 public class PlayerFPS : MonoBehaviour
 {
@@ -28,8 +26,6 @@ public class PlayerFPS : MonoBehaviour
  
     //Marche ou court ?
     private bool isRunning = false;
-    
-    private bool isPaused = false;
  
     //Rotation de la caméra
     float rotationX = 0;
