@@ -30,5 +30,4 @@ public class AudioInteractionmanager : MonoBehaviour
         audioSource.PlayOneShot(interact);
     }
     
-    
 }

@@ -7,6 +7,7 @@ using UnityEngine.Serialization;
 public class ShootAction : MonoBehaviour
 {
     public GameObject particle;
+    public GameObject smoke;
  
     private AudioManagement gunSound;
     
@@ -45,7 +46,7 @@ public class ShootAction : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        smoke.GetComponent<ParticleSystem>().Stop();
         gunSound = GetComponent<AudioManagement>();
         print(particle);
         
@@ -66,6 +67,7 @@ public class ShootAction : MonoBehaviour
         else
         {
             _overHeat = false;
+            smoke.GetComponent<ParticleSystem>().Stop();
         }
         if (Time.time >= nextTimeToFire) transform.localRotation = lookRifle;
 
@@ -90,6 +92,7 @@ public class ShootAction : MonoBehaviour
                 overHeating = _overHeatingMax;
                 _overHeat = true;
                 gunSound.PlayReload();
+                smoke.GetComponent<ParticleSystem>().Play();
             }
             
             gunSound.PlayGunShot();
