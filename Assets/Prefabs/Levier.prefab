@@ -140,8 +140,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0a091191291dd8498a19bf4ea722488, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levier: {fileID: 0}
+  levier: {fileID: 8300000, guid: ba8ea829dae1bb2419a2c47cf06e1712, type: 3}
   cristal: {fileID: 0}
+  interact: {fileID: 0}
 --- !u!82 &3619078271068579323
 AudioSource:
   m_ObjectHideFlags: 0

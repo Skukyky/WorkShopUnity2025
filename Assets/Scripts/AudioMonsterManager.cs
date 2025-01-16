@@ -15,7 +15,6 @@ public class AudioMonsterManager : MonoBehaviour
 
     public void Sound()
     {
-        print("caca");
          int indexAleatoire = Random.Range(0, idleSound.Length);
         audioSource.PlayOneShot(idleSound[indexAleatoire]);
         StartCoroutine(relance(5.0f));

@@ -7,6 +7,11 @@ public class Game2 : MonoBehaviour
     private AudioInteractionmanager audioInteractionmanager;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+    void Start()
+    {
+        audioInteractionmanager = GetComponent<AudioInteractionmanager>();
+    }
     public void Verify()
     {
         isValid = true;
@@ -20,8 +25,8 @@ public class Game2 : MonoBehaviour
 
         if (isValid)
         {
-            GetComponent<recupItem>().canRecupItem = true;
             audioInteractionmanager.useCristal();
+            GetComponent<recupItem>().canRecupItem = true;
         }
     }
 }
