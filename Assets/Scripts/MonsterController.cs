@@ -135,6 +135,7 @@ public class MonsterController : MonoBehaviour
 
     public void Defeated()
     {
+        audioMonsterManager.dieSound();
         SetActionState(DEFEATED_STATE);
         StartCoroutine(DestroyAfterDelay(1.2f));
     }
@@ -206,6 +207,7 @@ public class MonsterController : MonoBehaviour
 
     private void Attack()
     {
+        audioMonsterManager.attackSound();
         SetActionState(ATTACK_STATE);
         
         StartCoroutine(ExecuteAfterDelay(0.5f));

@@ -4,6 +4,8 @@ public class AudioMonsterManager : MonoBehaviour
 {
     private AudioSource audioSource;
     public AudioClip[] idleSound;
+    public AudioClip attack;
+    public AudioClip die;
     
     void Start()
     {
@@ -24,5 +26,14 @@ public class AudioMonsterManager : MonoBehaviour
         yield return new WaitForSeconds(delay);
         Sound();
     }
-    
+
+    public void attackSound()
+    {
+        audioSource.PlayOneShot(attack);
+    }
+
+    public void dieSound()
+    {
+        audioSource.PlayOneShot(die);
+    }
 }
