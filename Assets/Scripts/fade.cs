@@ -5,6 +5,9 @@ public class Fade : MonoBehaviour
 {
     private Image image; // Image du composant
     private Color color; // Couleur de l'image
+    private float fadeDirection = 1;
+    public bool fadeIn;
+    public float fadeSpeed;
 
     // Start est appelé une fois avant la première exécution de Update
     void Start()
@@ -14,9 +17,16 @@ public class Fade : MonoBehaviour
         {
             color = image.color; // Initialisation de la couleur
         }
+
+        if (fadeIn)
+        {
+            fadeDirection = -1;
+            color.a = 1;
+        }
         else
         {
-            Debug.LogError("Aucun composant Image trouvé sur cet objet !");
+            fadeDirection = 1;
+            color.a = 0;
         }
     }
 
@@ -26,7 +36,7 @@ public class Fade : MonoBehaviour
         if (image != null)
         {
             // Augmentation de l'alpha avec une limite
-            color.a = Mathf.Clamp(color.a + Time.deltaTime * 0.3f, 0f, 1f);
+            color.a = Mathf.Clamp(color.a + (Time.deltaTime * fadeSpeed)*fadeDirection, 0f, 1f);
             image.color = color; // Réaffectation de la couleur à l'image
         }
     }

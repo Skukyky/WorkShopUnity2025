@@ -5,13 +5,12 @@ using UnityEngine.SceneManagement;
 public class MenuScript : MonoBehaviour
 {
     public PlayableDirector timeline;
+    public bool autoActivate;
     public void QuitGame()
     {
         Application.Quit();
         print("Quit");
     }
-    
-    
     
     public void PlayGame()
     {
@@ -22,12 +21,26 @@ public class MenuScript : MonoBehaviour
         timeline.Play();
     }
 
+    private void Start()
+    {
+        if (autoActivate)
+        {
+            timeline.Play();
+        }
+        else
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
+    }
+
     void Update()
     {
-        if (timeline.time >= 29.9)
+        if (timeline.time >= timeline.duration-0.1)
         {
             timeline.Stop();
-            SceneManager.LoadScene(2);
+            if (SceneManager.GetActiveScene().buildIndex == 3) SceneManager.LoadScene(0);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
         }
     }
 }

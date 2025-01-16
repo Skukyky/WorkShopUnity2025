@@ -1,9 +1,12 @@
 using UnityEngine;
+using UnityEngine.Playables;
 using UnityEngine.SceneManagement;
 
 public class RefullSpaceShip : MonoBehaviour
 {
     private inventory _inventory;
+    public Fade timelineIn;
+    public Fade timelineOut;
     public int _numberOfEnergy;
     
     
@@ -15,7 +18,7 @@ public class RefullSpaceShip : MonoBehaviour
         _numberOfEnergy += _inventory.items;
         _inventory.items = 0;
         print(_numberOfEnergy);
-        if (_numberOfEnergy == 4)
+        if (_numberOfEnergy == 0)
         {
             Quit();
         }
@@ -23,8 +26,7 @@ public class RefullSpaceShip : MonoBehaviour
 
     private void Quit()
     {
-        Application.Quit();
-        print("Quit");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
     
 }
