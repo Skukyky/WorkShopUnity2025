@@ -141,6 +141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levier: {fileID: 0}
+  cristal: {fileID: 0}
 --- !u!82 &3619078271068579323
 AudioSource:
   m_ObjectHideFlags: 0
@@ -380,6 +381,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 756fe498e809d6b4e9e262074e9f27b9, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 2e8929cc097868d4895dfd8c17b6b170, type: 2}
     - target: {fileID: 919132149155446097, guid: 756fe498e809d6b4e9e262074e9f27b9, type: 3}
       propertyPath: m_Name
       value: LPSciFi_StraightRoadArrow
