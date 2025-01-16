@@ -29,11 +29,10 @@ public class receiveDamagePlayer : MonoBehaviour
     private void Start()
     {
 //Au début : Points de vie actuels = Maximum de points de vie
-        hitPoint = maxHitPoint;
         PlayerFPS = GetComponent<PlayerFPS>();
         isInvulnerable = false;
         StartCoroutine(RegenAfterDelay(1.0f));
-        
+        hitPoint = maxHitPoint;
     }
 
     private void Update()
@@ -78,7 +77,7 @@ public class receiveDamagePlayer : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         hitPoint += healthRegen;
-        hitPoint = Mathf.Clamp(hitPoint, 0, maxHitPoint);
+        hitPoint = Mathf.Clamp(hitPoint, 0, 100);
         StartCoroutine(RegenAfterDelay(2.0f));
     }
 }

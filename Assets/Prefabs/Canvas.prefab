@@ -393,14 +393,13 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 5652177733562222894}
+  m_Children: []
   m_Father: {fileID: 3712065033051349673}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -736, y: 493}
-  m_SizeDelta: {x: 400, y: 75}
+  m_SizeDelta: {x: 385, y: 55}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &702710130071687378
 CanvasRenderer:
@@ -453,7 +452,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   receiveDamagePlayer: {fileID: 0}
-  slider: {fileID: 0}
+  slider: {fileID: 1940203272784002878}
 --- !u!1 &1803287484420259147
 GameObject:
   m_ObjectHideFlags: 0
@@ -880,16 +879,16 @@ RectTransform:
   m_GameObject: {fileID: 4304379663274865480}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.2059175, y: 3.2823331, z: 1}
+  m_LocalScale: {x: 1.2059175, y: 3.2823334, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1925973666246101641}
   - {fileID: 1949967382706184288}
-  m_Father: {fileID: 8846072607984042208}
+  m_Father: {fileID: 3712065033051349673}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 7.100006, y: -29}
+  m_AnchoredPosition: {x: 31.099976, y: 966.5001}
   m_SizeDelta: {x: 320, y: 40}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1940203272784002878
@@ -939,7 +938,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1165,8 +1164,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 25, y: 977}
-  m_SizeDelta: {x: 398.82, y: 40}
+  m_AnchoredPosition: {x: 29.5, y: 977}
+  m_SizeDelta: {x: 389, y: 40}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &4149589357713582665
 MonoBehaviour:
@@ -1510,6 +1509,7 @@ RectTransform:
   - {fileID: 5627017854462765673}
   - {fileID: 3423537539095197602}
   - {fileID: 8846072607984042208}
+  - {fileID: 5652177733562222894}
   - {fileID: 8685694770962230950}
   - {fileID: 8173965195945831036}
   - {fileID: 5832791519706607478}
