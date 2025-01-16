@@ -6,12 +6,14 @@ public class OpenGate : MonoBehaviour
     private Vector3 rotation;
     public OpenGate Open;
     public Game2 PillonneGame2;
+    private AudioInteractionmanager audioInteractionmanager;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rotation = transform.GetChild(0).localEulerAngles;
         UpdateRotation();
+        audioInteractionmanager = GetComponent<AudioInteractionmanager>();
     }
 
     // Update is called once per frame
@@ -21,6 +23,7 @@ public class OpenGate : MonoBehaviour
 
     public void OnPress()
     {
+        audioInteractionmanager.useLeviert();
         IsActive = !IsActive;
         UpdateRotation();
         Open.Replicate();
