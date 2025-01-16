@@ -39,5 +39,10 @@ public class Fade : MonoBehaviour
             color.a = Mathf.Clamp(color.a + (Time.deltaTime * fadeSpeed)*fadeDirection, 0f, 1f);
             image.color = color; // Réaffectation de la couleur à l'image
         }
+
+        if (color.a <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }

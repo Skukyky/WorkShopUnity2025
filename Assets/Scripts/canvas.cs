@@ -14,7 +14,7 @@ public class canvas : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("t"))
+        if (Input.GetKeyDown("escape"))
         {
             Player.enabled = false;
             Cursor.visible = true;

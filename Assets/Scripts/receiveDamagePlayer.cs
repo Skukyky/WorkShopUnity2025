@@ -5,6 +5,8 @@ using UnityEngine;
 public class receiveDamagePlayer : MonoBehaviour
 
 {
+    public Pause pause;
+    PlayerFPS player;
 
 //Maximum de points de vie
     public int maxHitPoint = 5;
@@ -33,6 +35,7 @@ public class receiveDamagePlayer : MonoBehaviour
         isInvulnerable = false;
         StartCoroutine(RegenAfterDelay(1.0f));
         hitPoint = maxHitPoint;
+        player = GetComponent<PlayerFPS>();
     }
 
     private void Update()
@@ -69,7 +72,11 @@ public class receiveDamagePlayer : MonoBehaviour
 //S'il reste des points de vie
         if (hitPoint <= 0)
         {
-            Destroy(PlayerFPS.gameObject);
+            player.enabled = false;
+            Cursor.visible = true;
+            pause.gameObject.SetActive(true);
+            Time.timeScale = 0;
+            Cursor.lockState = CursorLockMode.None;
         }
     }
 
