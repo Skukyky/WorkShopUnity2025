@@ -11,6 +11,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MAP_planete_Z.01.unity
     guid: 679324cfb20b3a34097830a9f5718dd4
+  - enabled: 1
+    path: Assets/Scenes/Animation/Crash_cine.unity
+    guid: e5db7688b345bdd4eb0eec216cf48430
+  - enabled: 1
+    path: Assets/Scenes/Animation/End_cine.unity
+    guid: e2e1b327929d3914b987951b2aeb3418
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 53b19563f968238429f456d2fc53dd67, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}

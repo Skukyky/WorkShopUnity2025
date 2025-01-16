@@ -27,7 +27,7 @@ public class MenuScript : MonoBehaviour
         if (timeline.time >= 29.9)
         {
             timeline.Stop();
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(2);
         }
     }
 }
