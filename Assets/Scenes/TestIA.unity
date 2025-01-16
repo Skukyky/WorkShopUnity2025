@@ -245,7 +245,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5713204560252159668, guid: 24b5b7b62df86194cb9af88ef9df457a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.32
+      value: -25.59
       objectReference: {fileID: 0}
     - target: {fileID: 5713204560252159668, guid: 24b5b7b62df86194cb9af88ef9df457a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -253,7 +253,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5713204560252159668, guid: 24b5b7b62df86194cb9af88ef9df457a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -24.98
+      value: 0.42
       objectReference: {fileID: 0}
     - target: {fileID: 5713204560252159668, guid: 24b5b7b62df86194cb9af88ef9df457a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1485,6 +1485,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5652177733562222894, guid: edb3695e7ed53784bbac3b9d5c6bdc02, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 31.100098
+      objectReference: {fileID: 0}
     - target: {fileID: 5659946063709893474, guid: edb3695e7ed53784bbac3b9d5c6bdc02, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1520,11 +1524,15 @@ PrefabInstance:
     - target: {fileID: 6884239175505940922, guid: edb3695e7ed53784bbac3b9d5c6bdc02, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
+      objectReference: {fileID: -3454686206266057806, guid: d8b8397046d03784c8be7eb087d707a0, type: 2}
     - target: {fileID: 6936505999966595522, guid: edb3695e7ed53784bbac3b9d5c6bdc02, type: 3}
       propertyPath: inventory
       value: 
       objectReference: {fileID: 727689890}
+    - target: {fileID: 8582881297537855095, guid: edb3695e7ed53784bbac3b9d5c6bdc02, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 727689883}
     - target: {fileID: 8597672717962945822, guid: edb3695e7ed53784bbac3b9d5c6bdc02, type: 3}
       propertyPath: Slider
       value: 

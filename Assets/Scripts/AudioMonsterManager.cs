@@ -11,12 +11,18 @@ public class AudioMonsterManager : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
 
-    public IEnumerator Sound(float delay)
+    public void Sound()
+    {
+        print("caca");
+         int indexAleatoire = Random.Range(0, idleSound.Length);
+        audioSource.PlayOneShot(idleSound[indexAleatoire]);
+        StartCoroutine(relance(5.0f));
+    }
+
+    IEnumerator relance(float delay)
     {
         yield return new WaitForSeconds(delay);
-        int indexAleatoire = Random.Range(0, idleSound.Length);
-        audioSource.PlayOneShot(idleSound[indexAleatoire]);
-        StartCoroutine(Sound(5.0f));
+        Sound();
     }
     
 }

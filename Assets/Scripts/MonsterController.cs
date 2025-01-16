@@ -69,7 +69,7 @@ public class MonsterController : MonoBehaviour
     {
         startLocation = transform.position;
         audioMonsterManager = GetComponent<AudioMonsterManager>();
-        audioMonsterManager.Sound(1.0f);
+        audioMonsterManager.Sound();
     }
 
     private void Update()
