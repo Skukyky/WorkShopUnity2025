@@ -721,6 +721,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4b06abd65ced6549b8f2a0f0647883d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timelineIn: {fileID: 0}
+  timelineOut: {fileID: 0}
   _numberOfEnergy: 0
 --- !u!114 &727689883 stripped
 MonoBehaviour:

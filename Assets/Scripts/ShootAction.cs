@@ -6,6 +6,7 @@ using UnityEngine.Serialization;
 
 public class ShootAction : MonoBehaviour
 {
+    public GameObject particle;
  
     private AudioManagement gunSound;
     
@@ -46,6 +47,7 @@ public class ShootAction : MonoBehaviour
     {
         
         gunSound = GetComponent<AudioManagement>();
+        print(particle);
         
         //Référence de la caméra. GetComponentInParent<Camera> permet de chercher une Camera
         //dans ce GameObject et dans ses parents.
@@ -92,7 +94,7 @@ public class ShootAction : MonoBehaviour
             
             gunSound.PlayGunShot();
             ShootAnimation();
-            
+            particle.GetComponent<ParticleSystem>().Play();
 
             //On va lancer un rayon invisible qui simulera les balles du gun
 

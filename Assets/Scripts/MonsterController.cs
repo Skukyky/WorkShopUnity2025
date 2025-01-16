@@ -129,6 +129,7 @@ public class MonsterController : MonoBehaviour
 
     public void TakeDamage()
     {
+        audioMonsterManager.dieSound();
         SetActionState(TAKE_DAMAGE_STATE);
         StartCoroutine(MovingAfterDelay(1.0f));
     }
